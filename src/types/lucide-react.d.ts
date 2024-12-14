@@ -1,0 +1,12 @@
+declare module 'lucide-react/dist/esm/icons/map-pin';
+declare module 'lucide-react/dist/esm/icons/phone';
+declare module 'lucide-react/dist/esm/icons/mail';
+declare module 'lucide-react/dist/esm/icons/beer';
+declare module 'lucide-react/dist/esm/icons/clock';
+declare module 'lucide-react/dist/esm/icons/music';
+declare module 'lucide-react/dist/esm/icons/users';
+declare module 'lucide-react/dist/esm/icons/x';
+declare module 'lucide-react/dist/esm/icons/menu';
+declare module 'lucide-react/dist/esm/icons/calendar';
+declare module 'lucide-react/dist/esm/icons/clock';
+declare module 'lucide-react/dist/esm/icons/users';
