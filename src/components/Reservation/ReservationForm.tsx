@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import Users from 'lucide-react/dist/esm/icons/users';
-import { generateTimeSlots } from '../utils/timeUtilis';
+import {  generataOrario } from '../utils/timeUtilis';
 import TimeSlotGrid from './timeSlotGrid';
 
 export default function ReservationForm() {
-  const [selectedDate, setSelectedDate] = useState('');
+  // Stato per la data e l'orario selezionati
+  const [selectData, setselectData] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [guests, setGuests] = useState('1');
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Gestire la presentazione del modulo
-    console.log({ selectedDate, selectedTime, guests });
+    console.log({ selectData, selectedTime, guests });
   };
 
   return (
@@ -52,8 +53,8 @@ export default function ReservationForm() {
                 </label>
                 <input
                   type="date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
+                  value={selectData}
+                  onChange={(e) => setselectData(e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
                   className="w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
                 />
@@ -71,7 +72,7 @@ export default function ReservationForm() {
                   className="w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
                 >
                   <option value="">Seleziona l'ora</option>
-                  {generateTimeSlots().map((time) => (
+                  { generataOrario().map((time) => (
                     <option key={time} value={time}>{time}</option>
                   ))}
                 </select>
